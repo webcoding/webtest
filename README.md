@@ -1,9 +1,9 @@
 webtest
 =======
 
-测试使用
+测试使用项目
 
-此文档用于测试学习git以及关联github，在Organizations中如何管理项目，成员之间的文档合并问题等，通过此项目测试实践这些问题，以便其他项目减少出错！
+此项目将用于测试学习git以及关联github，在Organizations中如何管理项目，成员之间的文档合并问题等，通过此项目测试实践这些问题，以便其他项目减少出错！
 
 这是webCoding下的测试项目，由cloudYan、cloudAi管理和测试。
 
