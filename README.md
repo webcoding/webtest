@@ -8,3 +8,9 @@ webtest
 这是webCoding下的测试项目，由cloudYan、cloudAi管理和测试。
 
 详细的使用及测试数据将会在项目中放出来，同时还可以参看提交记录来学习使用！
+
+克隆测试项目，命令如下：
+
+    git clone git@github.com:webcoding/webtest.git
+
+本文档的上述修改，可作为测试提交，下面记录产生的问题：
