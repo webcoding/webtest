@@ -20,8 +20,9 @@ webtest
 
 # 新测试 #
 
-将原来的ssh绑定删除，重新开始，修改提交
+将原来的ssh绑定删除，重新开始，修改后提交
 
+    git commit -a -m "restart test"
     git push
 
 提示：
@@ -32,6 +33,39 @@ webtest
 输入正确的用户名密码，提交成功。
 
 
+## 通过ssh key与github网站帐户绑定 ##
+
+**创建验证用的公钥**
+
+在本地创建验证用的文件，使用命令：ssh-keygen -C 'you email address@gmail.com' -t rsa，会在用户目录 ~/.ssh/ 下建立相应的密钥文件
+
+可以使用 ssh -v git@github.com 命令来测试链接是否畅通
+
+    cd ~/.ssh
+    ssh-keygen -C ‘cloudAi@qq.com’ -t rsa
+    #输入文件名称保存即可，比如：id_rsa
+
+如果不输入文件名默认为id_rsa，我们需要的是.pub公钥文件，例如：
+
+> ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6FrM305gIKnZiLyFBciMDmUskheorVAS+5FtnAD4NFQ4
+> 0CawtdnlOdxu8bXN4MBp0lGbhs8dofVK8BRtXY+d2elNMB3D6NZ3p3xu/+c40WHRpYcjAPwXACGxEfJB
+> cuYby4HifDBDIx7eeSR4Pzp*********************************************31uQ+nbtMtc7
+> AhmmrIXXtqORQOu02qGDmZIPACCD4mOjujGW0xA0sa+ZDbyP/8W2A+h9011OshEA/Dx9DCJJ6yIZZXqT
+> iksMipztNV2GeKTnO/ztE8YrAJY6zZWA0/LDk3doqiJmF9zCx7RrFLkzww== cloudAi@qq.com
+
+如果上面使用 ssh-keygen -t rsa，则会如下，最后的标记不同，不指定的话，就取电脑名
+
+> ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA14fD1iCPJut92HGZ0aLQchhEwFsXVN6SImxxd6wxYmmO
+> khGre2dS3xw7jewwmDu5o8yuvySEw0u8QjE+1D8MmUZwrCK8BRtXqofS75RsvEgUhJUWpd0htrA2/dUl
+> WREoc***********************************************K8BRtXqofS75azDq5SHyx9DkPyKX
+> WDxt8GCjCXTdzFYvPMsf/gwzxi9/Rza7pevlyeMfLlrnukJ0jXMlxm/8Psu/hZrqViYjthaWjqT+HffR
+> c5pOt9AkL3MKgRqueMdkpOgWQsb7EYYyTnh1NiLirXfRpecV3NI2yV6P8w== Jack@ALICE
+
+**上传公钥**
+
+在 github.com 的界面中 选择右上角的 Account Settings，然后选择 SSH Public Keys ，选择新加。
+
+Title 可以随便命名(可以区分不同的绑定环境)，Key 的内容拷贝自 ~/.ssh/id_rsa.pub 中的内容，完成后，可以再使用 ssh -v git@github.com 进行测试。看到下面的信息表示验证成功。
 
 
 
