@@ -16,3 +16,25 @@ webtest
 本文档的上述修改，可作为测试提交，下面记录产生的问题：
 
 由于之前做过ssh绑定，直接提交成功了。
+
+
+# 新测试 #
+
+将原来的ssh绑定删除，重新开始，修改提交
+
+    git push
+
+提示：
+
+    Username for 'https://github.com':
+	Password for 'https://clouda@github.com':
+
+输入正确的用户名密码，提交成功。
+
+
+
+
+
+
+
+
