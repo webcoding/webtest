@@ -14,3 +14,5 @@ webtest
     git clone git@github.com:webcoding/webtest.git
 
 本文档的上述修改，可作为测试提交，下面记录产生的问题：
+
+由于之前做过ssh绑定，直接提交成功了。
