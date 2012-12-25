@@ -1,5 +1,4 @@
-webtest
-=======
+## webtest ##
 
 测试使用项目
 
@@ -17,8 +16,9 @@ webtest
 
 由于之前做过ssh绑定，直接提交成功了。
 
+经过测试，但凡账户已经绑定的，新作为Organizations 的 Members时，就已经具备上传的权限了。
 
-# 新测试 #
+# 如何绑定？新测试 #
 
 将原来的ssh绑定删除，重新开始，修改后提交
 
@@ -31,7 +31,6 @@ webtest
 	Password for 'https://clouda@github.com':
 
 输入正确的用户名密码，提交成功。
-
 
 ## 通过ssh key与github网站帐户绑定 ##
 
@@ -67,11 +66,21 @@ webtest
 
 Title 可以随便命名(可以区分不同的绑定环境)，Key 的内容拷贝自 ~/.ssh/id_rsa.pub 中的内容，完成后，可以再使用 ssh -v git@github.com 进行测试。看到下面的信息表示验证成功。
 
+
+这里要注意,之前如果绑定过，那么简单的删除是不够干净的。
+
 **Fork测试**
 
-Fork之后测试数据提交效果。
+Fork之后测试数据提交效果。测试完成，连接成功，push没问题了。
 
-测试网线，跟防火墙有关系，还需要检查443端口有没有开放。
+另一根网线测试，纠结的网线！纠结的端口，再一次测试！测试网线，跟防火墙有关系，还需要检查443端口有没有开放。
 
+这个蛋疼的问题，原来由网线引起，昨天调试到了半夜，老是不管用，push不上去，可能这根网线连接的路由器接口有安全设置吧，出现连接不上，并且有提示如下：
+
+    Read from remote host github.com: Connection reset by peer fatal: Could not read from remote repository.
+
+    Please make sure you have the correct access rights and the repository exists.
+
+但是换根网线完全好了，浪费了那么多时间！
 
 
