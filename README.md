@@ -75,7 +75,12 @@ Fork之后测试数据提交效果。测试完成，连接成功，push没问题
 
 另一根网线测试，纠结的网线！纠结的端口，再一次测试！
 
+这个蛋疼的问题，原来由网线引起，昨天调试到了半夜，老是不管用，push不上去，可能这根网线连接的路由器接口有安全设置吧，出现连接不上，并且有提示如下：
 
+    Read from remote host github.com: Connection reset by peer fatal: Could not read from remote repository.
 
+    Please make sure you have the correct access rights and the repository exists.
+
+但是换根网线完全好了，浪费了那么多时间！
 
 
