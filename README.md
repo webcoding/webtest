@@ -84,3 +84,10 @@ Fork之后测试数据提交效果。测试完成，连接成功，push没问题
 但是换根网线完全好了，浪费了那么多时间！
 
 
+**测试Fork的分支提交到主项目master上**
+
+首先修改Fork分支，提交，并push到webcoding上
+
+    git push git@github.com:webcoding/webtest.git master
+
+下面将此修改再测试一下。
