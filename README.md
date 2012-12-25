@@ -67,7 +67,9 @@ webtest
 
 Title 可以随便命名(可以区分不同的绑定环境)，Key 的内容拷贝自 ~/.ssh/id_rsa.pub 中的内容，完成后，可以再使用 ssh -v git@github.com 进行测试。看到下面的信息表示验证成功。
 
+**Fork测试**
 
+Fork之后测试数据提交效果。
 
 
 
