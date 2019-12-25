@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "CE7Z2WQ7MW.com.doweidu.mishifeng",
+        "paths": ["/application/*"]
+      }
+    ]
+  }
+}
